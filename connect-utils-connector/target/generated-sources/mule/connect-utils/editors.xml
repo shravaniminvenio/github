@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<namespace xmlns="http://www.mulesoft.org/schema/mule/tooling.attributes" xmlns:mule="http://www.mulesoft.org/schema/mule/core" url="http://www.mulesoft.org/schema/mule/connect-utils" prefix="connect-utils">
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="ConnectUtils" description="" icon="" localId="parentConfig" image="" abstract="true" extends="http://www.mulesoft.org/schema/mule/connect-utils/abstractConnect-utilsConnectorGeneric"></global-cloud-connector>
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="ConnectUtils" description="Global ConnectUtils configuration information." icon="icons/theme.classic/connect-utils-connector-small.png" localId="config" image="icons/theme.classic/connect-utils-connector-large.png" abstract="false" extends="http://www.mulesoft.org/schema/mule/connect-utils/parentConfig" connectivityTesting="off" metaData="static" metaDataKeyDisplay="DISPLAY_NAME" supportsUserDefinedMetaData="false">
+    <attribute-category caption="General" description="Connect-utils configuration properties.">
+      <group id="connect-utilsGenericProperties" caption="Basic Settings">
+        <name name="name" caption="Name" description="Give a name to this configuration so it can be later referenced by config-ref." required="true"></name>
+      </group>
+    </attribute-category>
+  </global-cloud-connector>
+  <cloud-connector caption="Abstractconnect-utilsconnectorgeneric" description="Interact with Connect-utils." icon="icons/theme.classic/connect-utils-connector-small.png" localId="abstractConnect-utilsConnectorGeneric" image="icons/theme.classic/connect-utils-connector-large.png" abstract="true">
+    <attribute-category caption="General" description="General.">
+      <group id="abstractConnect-utilsConnectorGeneric" caption="Basic Settings"></group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector versions="[3.5.0,8.0.0]" aliasId="org.mule.tooling.ui.modules.core.pattern.connect-utils" caption="ConnectUtils" description="" icon="icons/theme.classic/connect-utils-connector-small.png" localId="connect-utils-connector" image="icons/theme.classic/connect-utils-connector-large.png" extends="http://www.mulesoft.org/schema/mule/connect-utils/abstractConnect-utilsConnectorGeneric">
+    <attribute-category caption="General" description="General.">
+      <group id="connect-utilsConnectorGeneric" caption="Basic Settings">
+        <modeSwitch alwaysCombo="true" name="Connect-utils operations to execute" caption="Operation" description="Operation.">
+          <no-operation abstractElement="http://www.mulesoft.org/schema/mule/connect-utils/abstractConnect-utilsConnectorGeneric" versions="[3.5.0,8.0.0]" connector-name="processor"></no-operation>
+          <mode modeId="http://www.mulesoft.org/schema/mule/connect-utils/get-date-as-x-m-l-gregorian-calendar" modeLabel="Get date as x m l gregorian calendar"></mode>
+          <mode modeId="http://www.mulesoft.org/schema/mule/connect-utils/get-formatted-date" modeLabel="Get formatted date"></mode>
+        </modeSwitch>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="javax.xml.datatype.XMLGregorianCalendar" caption="Get Date As X M L Gregorian Calendar" icon="icons/theme.classic/connect-utils-connector-small.png" localId="get-date-as-x-m-l-gregorian-calendar" image="icons/theme.classic/connect-utils-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/connect-utils/abstractConnect-utilsConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="date" caption="Date" description="The date." required="true" javaType="java.util.Date"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" caption="Get Formatted Date" icon="icons/theme.classic/connect-utils-connector-small.png" localId="get-formatted-date" image="icons/theme.classic/connect-utils-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/connect-utils/abstractConnect-utilsConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="inputDTM" caption="Input D T M" description="The date to b formated." required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+</namespace>

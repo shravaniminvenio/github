@@ -1,0 +1,93 @@
+{
+  "minMuleVersion": "3.5.0",
+  "requiresEntitlement": false,
+  "requiresEnterpriseLicense": false,
+  "configs": [],
+  "attributes": [],
+  "processors": [
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "the formatted date"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "inputDTM",
+          "description": "the date to b formated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "getFormattedDate",
+      "friendlyName": "Get formatted date",
+      "description": "This method formats the EDIFACT date",
+      "xsdName": "get-formatted-date"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "XMLGregorianCalendar",
+        "fullQualifiedJavaTypeName": "javax.xml.datatype.XMLGregorianCalendar",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "the date as xml gregorian calendar"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Date",
+          "fullQualifiedJavaTypeName": "java.util.Date",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "java.util.Date",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "date",
+          "description": "the date"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "getDateAsXMLGregorianCalendar",
+      "friendlyName": "Get date as x m l gregorian calendar",
+      "description": "This method is used to get the date as XMLGregorianCalendar.",
+      "xsdName": "get-date-as-x-m-l-gregorian-calendar"
+    }
+  ],
+  "filters": [],
+  "transformers": [],
+  "sources": [],
+  "javaName": "ConnectUtilsConnector",
+  "friendlyName": "ConnectUtils",
+  "xsdName": "connect-utils"
+}
